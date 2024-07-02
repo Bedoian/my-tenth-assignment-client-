@@ -35,7 +35,7 @@ const Banner = () => {
               {/* left */}
             </div>
             <div className="text-start relative bottom-96 left-36 text-white">
-                <p className="lg:text-6xl text-xl lg:font-bold">Millons of Exparience. <br /> One Simple Search.</p>
+                <p className="lg:text-6xl text-xl md:text-4xl font-bold">Millons of Exparience. <br /> One Simple Search.</p>
                 <p className="text-xl mt-3 font-semibold">Find What makes you happy anytime,anywhere</p>
             </div>
           </div>
@@ -51,7 +51,7 @@ const Banner = () => {
               {/* left */}
             </div>
             <div className="text-start relative bottom-96 left-36 text-white">
-                <p className="lg:text-6xl text-xl lg:font-bold">Millons of Exparience. <br /> One Simple Search.</p>
+                <p className="lg:text-6xl text-xl md:text-4xl font-bold">Millons of Exparience. <br /> One Simple Search.</p>
                 <p className="text-xl mt-3  font-semibold">Find What makes you happy anytime,anywhere</p>
             </div>
           </div>
@@ -67,7 +67,7 @@ const Banner = () => {
               {/* left */}
             </div>
             <div className="text-start relative bottom-96 left-36 text-white">
-                <p className="lg:text-6xl text-xl lg:font-bold">Millons of Exparience. <br /> One Simple Search.</p>
+                <p className="lg:text-6xl text-xl md:text-4xl font-bold">Millons of Exparience. <br /> One Simple Search.</p>
                 <p className="text-xl mt-3  font-semibold">Find What makes you happy anytime,anywhere</p>
             </div>
           </div>
@@ -83,7 +83,7 @@ const Banner = () => {
               {/* left */}
             </div>
             <div className="text-start relative bottom-96 left-36 text-white">
-                <p className="lg:text-6xl text-xl lg:font-bold">Millons of Exparience. <br /> One Simple Search.</p>
+                <p className="lg:text-6xl text-xl md:text-4xl font-bold">Millons of Exparience. <br /> One Simple Search.</p>
                 <p className="text-xl mt-3  font-semibold">Find What makes you happy anytime,anywhere</p>
             </div>
           </div>
