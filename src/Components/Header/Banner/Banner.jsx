@@ -1,7 +1,7 @@
-import img1 from "../../assets/MatterHorn.jpg";
-import img2 from "../../assets/Road.jpg";
-import img3 from "../../assets/Lake Geneva.jpg";
-import img4 from "../../assets/jungfrau.jpg"
+import img1 from "../../../assets/MatterHorn.jpg";
+import img2 from "../../../assets/Road.jpg";
+import img3 from "../../../assets/Lake Geneva.jpg";
+import img4 from "../../../assets/jungfrau.jpg"
 import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
