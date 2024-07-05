@@ -10,11 +10,11 @@ const ViewDetail = () => {
     return (
         <div>
             <div className=" mt-10">
-                <div className=" flex gap-7">
+                <div className=" flex lg:flex-row flex-col gap-7">
                     <div className="  mb-6  rounded-lg">
                         <img src={photo} className="lg:w-[800px] rounded-2xl " />
                     </div>
-                    <div className="w-3/5 text-start">
+                    <div className=" lg:w-3/5 text-start">
                         <p className="text-3xl font-bold"></p>
                         <div className="border-b-[2px] border-dashed border-green-400 pb-2">
                             <p className="my-3 text-2xl font-bold  ">{name}</p>
@@ -33,19 +33,19 @@ const ViewDetail = () => {
                                 <table className="table">
                                     <tbody>
                                         <tr>
-                                            <td className="flex justify-between ">
-                                                <div className="flex relative top-2">
-                                                    <img className="w-8 h-8" src={euro} alt="" />
-                                                    <p className="relative top-1 text-blue-500 text-lg font-bold">€{cost}</p>
+                                            <td className="flex justify-between relative lg:left-0 left-5">
+                                                <div className="flex relative lg:top-2">
+                                                    <img className="lg:w-8 w-6 h-6 lg:h-8" src={euro} alt="" />
+                                                    <p className="lg:relative top-1 text-blue-500 text-lg font-bold">€{cost}</p>
                                                 </div>
-                                                <div>
-                                                    <p className="bg-green-100 p-2 rounded-full text-lg font-semibold text-green-500">#{season} Vacation</p>
+                                                <div className="relative lg:top-0 lg:left-0  left-4">
+                                                    <p className="bg-green-100  lg:p-2 rounded-full text-lg font-semibold text-green-500">#{season} Vacation</p>
                                                 </div>
                                             </td>
                                             <td className="text-sm font-bold"></td>
                                         </tr>
                                         <tr>
-                                            <td className="flex justify-between">
+                                            <td className="flex relative lg:left-0 left-6 justify-between">
                                                 <div className="flex gap-1">
                                                     <img className="w-5 h-5" src={duration} alt="" />
                                                     <p className="text-[15px] relative bottom-[1px] text-gray-500 font-semibold">{Ttime}</p>
@@ -57,7 +57,7 @@ const ViewDetail = () => {
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td className="text-center text-lg font-semibold">About {visitor} people visit yearly</td>
+                                            <td className="text-center relative lg:left-0 left-6 text-lg font-semibold">About {visitor} people visit yearly</td>
                                             <td className="text-sm font-bold" ></td>
                                         </tr>
                                     </tbody>

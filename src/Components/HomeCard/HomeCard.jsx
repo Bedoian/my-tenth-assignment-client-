@@ -11,7 +11,7 @@ const HomeCard = () => {
     }, [])
     return (
         <div>
-            <h1 className="text-4xl font-bold mt-16 relative right-64">Top Destination For Your Next Vacation</h1>
+            <h1 className="text-4xl hidden md:block font-bold mt-16 relative right-64">Top Destination For Your Next Vacation</h1>
             <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-4 mx-3 mt-12">
                 {
                     cardSpot.map(card => <div key={card._id} className=" shadow-xl]">

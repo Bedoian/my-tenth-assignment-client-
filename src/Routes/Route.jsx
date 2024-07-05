@@ -7,6 +7,7 @@ import Login from "../Pages/Login/Login";
 import SignUp from "../Pages/SignUp/SignUp";
 import Home from "../Pages/Home/Home";
 import ViewDetail from "../Pages/ViewDetail/ViewDetail";
+import AllSpot from "../Pages/All Spot/AllSpot";
 
 export const router = createBrowserRouter([
     {
@@ -33,6 +34,11 @@ export const router = createBrowserRouter([
           path:'/viewDetail/:id',
           element:<ViewDetail></ViewDetail>,
           loader:({params})=>fetch(`http://localhost:5000/spot/${params.id}`)
+        },
+        {
+          path:'/allSpot',
+          element:<AllSpot></AllSpot>,
+          loader:()=>fetch('http://localhost:5000/spot')
         }
       ]
     },
