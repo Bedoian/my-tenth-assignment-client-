@@ -5,7 +5,6 @@ import { AuthContext } from "../../Provider/AuthProvider";
 const AddSpot = () => {
     const [season, setSeason] = useState();
     const{user}=useContext(AuthContext)
-    console.log(user.email)
 
     const handleAddSpots = e => {
         e.preventDefault()
@@ -38,7 +37,7 @@ const AddSpot = () => {
                         title: 'Success!',
                         text: 'Coffee Added Successfully',
                         icon: 'success',
-                        confirmButtonText: 'Cool'
+                        confirmButtonText: 'Continue'
                       })
                       form.reset()
                 }

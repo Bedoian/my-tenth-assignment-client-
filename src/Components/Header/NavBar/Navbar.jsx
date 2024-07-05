@@ -59,7 +59,7 @@ const Navbar = () => {
 
                     </ul>
                 </div>
-                <div className="flex relative right-24">
+                <div className="flex ">
                     <img className=" hidden md:block  w-16 h-16  relative bottom-3  " src={tIcon} alt="" />
                     <p className="lg:text-3xl text-xl relative lg:left-0 lg:right-3 md:left-80 font-semibold left-6 lg:bottom-0 ">TouroLogy</p>
                 </div>

@@ -10,6 +10,7 @@ import ViewDetail from "../Pages/ViewDetail/ViewDetail";
 import AllSpot from "../Pages/All Spot/AllSpot";
 import PrivetRoute from "./PrivetRoute";
 import MyList from "../Pages/My List/MyList";
+import Update from "../Pages/Update User/Update";
 
 export const router = createBrowserRouter([
     {
@@ -45,6 +46,11 @@ export const router = createBrowserRouter([
         {
           path:'/myList',
           element:<PrivetRoute><MyList></MyList></PrivetRoute>
+        },
+        {
+          path:'/update/:id',
+          element:<Update></Update>,
+          loader:({params})=>fetch(`http://localhost:5000/spot/${params.id}`)
         }
       ]
     },
