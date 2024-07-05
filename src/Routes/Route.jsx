@@ -8,6 +8,8 @@ import SignUp from "../Pages/SignUp/SignUp";
 import Home from "../Pages/Home/Home";
 import ViewDetail from "../Pages/ViewDetail/ViewDetail";
 import AllSpot from "../Pages/All Spot/AllSpot";
+import PrivetRoute from "./PrivetRoute";
+import MyList from "../Pages/My List/MyList";
 
 export const router = createBrowserRouter([
     {
@@ -20,7 +22,7 @@ export const router = createBrowserRouter([
         },
         {
           path:'/addSpot',
-          element:<AddSpot></AddSpot>
+          element:<PrivetRoute><AddSpot></AddSpot></PrivetRoute>
         },
         {
           path:'/login',
@@ -37,8 +39,12 @@ export const router = createBrowserRouter([
         },
         {
           path:'/allSpot',
-          element:<AllSpot></AllSpot>,
+          element:<PrivetRoute><AllSpot></AllSpot></PrivetRoute>,
           loader:()=>fetch('http://localhost:5000/spot')
+        },
+        {
+          path:'/myList',
+          element:<PrivetRoute><MyList></MyList></PrivetRoute>
         }
       ]
     },

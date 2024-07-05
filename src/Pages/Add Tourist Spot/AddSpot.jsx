@@ -1,8 +1,11 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Swal from "sweetalert2";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const AddSpot = () => {
     const [season, setSeason] = useState();
+    const{user}=useContext(AuthContext)
+    console.log(user.email)
 
     const handleAddSpots = e => {
         e.preventDefault()
@@ -15,8 +18,9 @@ const AddSpot = () => {
         const Ttime = form.time.value;
         const visitor = form.visitor.value;
         const discription = form.discription.value;
+        const email=user.email
 
-        const spotDetail = { name, country, location, photo, cost, Ttime, visitor, discription, season }
+        const spotDetail = { name, country, location, photo, cost, Ttime, visitor, discription, season,email }
 
         // send data to the server
          fetch('http://localhost:5000/spot', {

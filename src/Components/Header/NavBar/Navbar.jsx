@@ -6,7 +6,7 @@ const Navbar = () => {
     const navLinks =
         <div className="flex text-xl gap-3 font-semibold">
             <NavLink to='/' className={({ isActive }) => isActive ? 'text-green-600 border-2 border-green-600 border-l-0 border-r-0' : ''}><li>Home</li></NavLink>
-            <NavLink to='/1' className={({ isActive }) => isActive ? 'text-green-600 border-2 border-green-600 border-l-0 border-r-0' : ''}><li>My List</li></NavLink>
+            <NavLink to='/myList' className={({ isActive }) => isActive ? 'text-green-600 border-2 border-green-600 border-l-0 border-r-0' : ''}><li>My List</li></NavLink>
             <NavLink to='/allSpot' className={({ isActive }) => isActive ? 'text-green-600 border-2 border-green-600 border-l-0 border-r-0' : ''}><li>All Spots</li></NavLink>
             <NavLink to='/addSpot' className={({ isActive }) => isActive ? 'text-green-600 border-2 border-green-600 border-l-0 border-r-0' : ''}><li>Add Spots</li></NavLink>
         </div>
