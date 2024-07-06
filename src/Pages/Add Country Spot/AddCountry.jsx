@@ -3,7 +3,7 @@ import Swal from "sweetalert2";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { Link } from "react-router-dom";
 
-const AddSpot = () => {
+const AddCountry = () => {
     const [season, setSeason] = useState();
     const{user}=useContext(AuthContext)
 
@@ -23,7 +23,7 @@ const AddSpot = () => {
         const spotDetail = { name, country, location, photo, cost, Ttime, visitor, discription, season,email }
 
         // send spot data to the server
-         fetch('http://localhost:5000/spot', {
+         fetch('http://localhost:5000/country', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -36,7 +36,7 @@ const AddSpot = () => {
                 if(data.insertedId){
                     Swal.fire({
                         title: 'Success!',
-                        text: 'Coffee Added Successfully',
+                        text: 'Country Added Successfully',
                         icon: 'success',
                         confirmButtonText: 'Continue'
                       })
@@ -45,33 +45,13 @@ const AddSpot = () => {
             })
 
             // send country data to the server
-            fetch('http://localhost:5000/country', {
-                method: 'POST',
-                headers: {
-                    'content-type': 'application/json'
-                },
-                body: JSON.stringify(spotDetail)
-            })
-                .then(res => res.json())
-                .then(data => {
-                    console.log(data);
-                    if(data.insertedId){
-                        Swal.fire({
-                            title: 'Success!',
-                            text: 'Coffee Added Successfully',
-                            icon: 'success',
-                            confirmButtonText: 'Continue'
-                          })
-                          form.reset()
-                    }
-                })
 
             
     }
 
     return (
         <div className="bg-[#F4F3F0] md:p-4 lg:p-12 p-3">
-            <h2 className="text-4xl text-green-500 relative bottom-5 font-semibold">Add Tourist Spot</h2>
+            <h2 className="text-4xl text-orange-400 relative bottom-5 font-semibold">Add Country Spot</h2>
             <form onSubmit={handleAddSpots}>
                 {/* Tourist spot and country row */}
                 <div className="lg:flex md:flex mb-4 lg:gap-3">
@@ -198,12 +178,12 @@ const AddSpot = () => {
                         </label>
                     </div>
                 </div>
-                <input type="submit" value="Add Tourist Spot" className="btn btn-block bg-pink-500 text-white text-xl" />
-                <p className="text-lg ">Wanna Add country data?<Link to='/addCountry' className="link-hover text-blue-500">Visit</Link></p>
+                <input type="submit" value="Add Country Spot" className="btn btn-block bg-orange-400 text-white text-xl" />
+                <p className="text-lg ">Wanna Add spot data?<Link to='/addSpot' className="link-hover text-blue-500">Visit</Link></p>
 
             </form>
         </div>
     );
 };
 
-export default AddSpot;
+export default AddCountry;

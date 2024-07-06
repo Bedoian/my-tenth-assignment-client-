@@ -18,10 +18,10 @@ const HomeCard = () => {
                         <img className="rounded-xl hero-overlay bg-gray-800 lg:w-72 lg:h-[360px]"
                             src={card.photo} />
 
-                      <div className="relative bottom-32">
+                      <div className="relative right-4 bottom-32">
                       <h1 className="text-4xl text-white font-bold ">{card.name}</h1>
                     <Link to={`/viewDetail/${card._id}`}>
-                    <button className="btn btn-ghost rounded-full  text-white relative top-4 border-white hover:text-green-500 hover:border-green-500">View Deails</button>
+                    <button className="btn btn-ghost rounded-full  text-white relative top-4 r  border-white hover:text-green-500 hover:border-green-500">View Deails</button>
                     </Link>
                       </div>
                     </div>)

@@ -11,6 +11,9 @@ import AllSpot from "../Pages/All Spot/AllSpot";
 import PrivetRoute from "./PrivetRoute";
 import MyList from "../Pages/My List/MyList";
 import Update from "../Pages/Update User/Update";
+import AddCountry from "../Pages/Add Country Spot/AddCountry";
+import CountryCard from "../Components/CountryCard/CountryCard";
+import ViewCountryDetail from "../Components/CountryCard/View Country/ViewCountryDetail";
 
 export const router = createBrowserRouter([
     {
@@ -51,6 +54,15 @@ export const router = createBrowserRouter([
           path:'/update/:id',
           element:<Update></Update>,
           loader:({params})=>fetch(`http://localhost:5000/spot/${params.id}`)
+        },
+        {
+          path:'/addCountry',
+          element:<AddCountry></AddCountry>
+        },
+        {
+          path:'/viewCountry/:id',
+          element:<ViewCountryDetail></ViewCountryDetail>,
+          loader:({params})=>fetch(`http://localhost:5000/country/${params.id}`)
         }
       ]
     },
