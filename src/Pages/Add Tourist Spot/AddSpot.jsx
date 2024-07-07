@@ -23,7 +23,7 @@ const AddSpot = () => {
         const spotDetail = { name, country, location, photo, cost, Ttime, visitor, discription, season,email }
 
         // send spot data to the server
-         fetch('http://localhost:5000/spot', {
+         fetch('https://my-tenth-assignment-server-one.vercel.app/spot', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -45,7 +45,7 @@ const AddSpot = () => {
             })
 
             // send country data to the server
-            fetch('http://localhost:5000/country', {
+            fetch('https://my-tenth-assignment-server-one.vercel.app/country', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'
