@@ -2,13 +2,15 @@ import { Link, NavLink } from "react-router-dom";
 import tIcon from '../../../assets/icons8-airport-100.png'
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../../Provider/AuthProvider";
+import { Tooltip } from 'react-tooltip'
 const Navbar = () => {
     const navLinks =
         <div className="flex text-xl gap-3 font-semibold">
             <NavLink to='/' className={({ isActive }) => isActive ? 'text-green-600 border-2 border-green-600 border-l-0 border-r-0' : ''}><li>Home</li></NavLink>
-            <NavLink to='/myList' className={({ isActive }) => isActive ? 'text-green-600 border-2 border-green-600 border-l-0 border-r-0' : ''}><li>My List</li></NavLink>
+         
             <NavLink to='/allSpot' className={({ isActive }) => isActive ? 'text-green-600 border-2 border-green-600 border-l-0 border-r-0' : ''}><li>All Spots</li></NavLink>
             <NavLink to='/addSpot' className={({ isActive }) => isActive ? 'text-green-600 border-2 border-green-600 border-l-0 border-r-0' : ''}><li>Add Spots</li></NavLink>
+            <NavLink to='/myList' className={({ isActive }) => isActive ? 'text-green-600 border-2 border-green-600 border-l-0 border-r-0' : ''}><li>My List</li></NavLink>
         </div>
 
     const [theme, setTheme] = useState('light')
@@ -81,7 +83,11 @@ const Navbar = () => {
                     {
                         user ?
                             <div className="flex gap-3">
-                                   <img className="rounded-full w-14 h-14" src={user.photoURL} />
+                                   <img data-tooltip-id="my-tooltip"
+                                    data-tooltip-content={user.email}
+                                    data-tooltip-place="top"  
+                                   className="rounded-full w-14 h-14 cursor-pointer" src={user.photoURL} />
+                                   <Tooltip id="my-tooltip"></Tooltip>
                                 <button onClick={handleLogOut} className="btn bg-teal-500 text-white rounded-full">SignOut</button>
                             </div>
                             :

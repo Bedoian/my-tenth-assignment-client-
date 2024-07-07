@@ -54,7 +54,7 @@ const SignUp = () => {
     return (
         <div className="mb-20">
             <div>
-                <h1 className="text-black text-center text-4xl font-bold my-6">Please Login!</h1>
+                <h1 className="text-black text-center text-4xl font-bold my-6">Please SignUp!</h1>
             </div>
             <div className="card shrink-0 w-full mx-auto border-2 border-gray-200 max-w-sm shadow-2xl bg-base-100">
                 <form onSubmit={handleSubmit(onSubmit)}>
