@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import git from '../../assets/icons8-github-96.png'
 import google from '../../assets/icons8-google-96.png'
 import { AuthContext } from "../../Provider/AuthProvider";
+import toast from "react-hot-toast";
 const Login = () => {
     const [showPass, setShowPass] = useState(false)
 
@@ -22,6 +23,7 @@ const Login = () => {
         })
         .catch(error=>{
             console.log(error)
+            toast.error('Invalid Credentials')
         })
       
     }
@@ -72,7 +74,7 @@ const Login = () => {
                         </label>
                     </div>
                     <div className="form-control mt-6">
-                        <button className="btn relative bottom-3 bg-orange-400 text-white text-lg">SignUp</button>
+                        <button className="btn relative bottom-3 bg-orange-400 text-white text-lg">Login</button>
                     </div>
                     <p className="text-center">Not a member?<Link to='/signUp' className="text-orange-400 link-hover">SignUp</Link></p>
 

@@ -46,7 +46,10 @@ const SignUp = () => {
                     photoURL: photoURL
                 })
             })
-            .catch(error => { console.log(error) })
+            .catch(error => { 
+                console.log(error)
+                toast.error('This email alredy exists')
+             })
     }
     return (
         <div className="mb-20">
