@@ -50,7 +50,7 @@ const MyList = () => {
                     {/* head */}
                     <thead>
                         <tr className="bg-teal-500  text-white text-lg">
-                            <th>ID</th>
+                            <th>*</th>
                             <th>Name</th>
                             <th>Country</th>
                             <th>Cost</th>
@@ -60,7 +60,7 @@ const MyList = () => {
                     <tbody>
                         {
                             emailData.map(user => <tr key={user._id} className="bg-base-200">
-                                <th>1</th>
+                                <th>+</th>
                                 <td className="text-lg font-medium">{user.name}</td>
                                 <td className="text-lg text-red-500 font-medium">{user.country}</td>
                                 <td className="text-blue-500 text-lg">€{user.cost}
