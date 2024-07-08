@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const HomeCard = () => {
     const [cardSpot, setCardSpot] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/spot')
+        fetch('https://my-tenth-assignment-server-one.vercel.app/spot')
             .then(res => res.json())
             .then(data => setCardSpot(data))
     }, [])
