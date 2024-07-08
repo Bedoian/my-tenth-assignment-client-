@@ -7,7 +7,7 @@ const CountryCard = () => {
     const[cardCon,setCard]=useState([])
 
     useEffect(()=>{
-        fetch('https://my-tenth-assignment-server-one.vercel.app/country')
+        fetch('http://localhost:5000/country')
         .then(res=>res.json())
         .then(data=>setCard(data))
     },[])

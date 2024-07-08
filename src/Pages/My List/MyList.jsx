@@ -7,7 +7,7 @@ const MyList = () => {
     const [emailData, setEmailData] = useState([])
     const { user } = useContext(AuthContext)
     useEffect(() => {
-        fetch(`https://my-tenth-assignment-server-one.vercel.app/myList/${user?.email}`)
+        fetch(`http://localhost:5000/myList/${user?.email}`)
             .then(res => res.json())
             .then(data => setEmailData(data))
     }, [user])
@@ -28,7 +28,7 @@ const MyList = () => {
                     text: "Your file has been deleted.",
                     icon: "success"
                 });
-                fetch(`https://my-tenth-assignment-server-one.vercel.app/spot/${id}`, {
+                fetch(`http://localhost:5000/spot/${id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

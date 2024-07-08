@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 const AddSpot = () => {
     const [season, setSeason] = useState();
@@ -23,7 +24,7 @@ const AddSpot = () => {
         const spotDetail = { name, country, location, photo, cost, Ttime, visitor, discription, season,email }
 
         // send spot data to the server
-         fetch('https://my-tenth-assignment-server-one.vercel.app/spot', {
+         fetch('http://localhost:5000/spot', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -43,28 +44,7 @@ const AddSpot = () => {
                       form.reset()
                 }
             })
-
-            // send country data to the server
-            fetch('https://my-tenth-assignment-server-one.vercel.app/country', {
-                method: 'POST',
-                headers: {
-                    'content-type': 'application/json'
-                },
-                body: JSON.stringify(spotDetail)
-            })
-                .then(res => res.json())
-                .then(data => {
-                    console.log(data);
-                    if(data.insertedId){
-                        Swal.fire({
-                            title: 'Success!',
-                            text: 'Coffee Added Successfully',
-                            icon: 'success',
-                            confirmButtonText: 'Continue'
-                          })
-                          form.reset()
-                    }
-                })
+      
 
             
     }

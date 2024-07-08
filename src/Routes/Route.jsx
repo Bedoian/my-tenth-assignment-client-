@@ -39,12 +39,12 @@ export const router = createBrowserRouter([
         {
           path:'/viewDetail/:id',
           element:<ViewDetail></ViewDetail>,
-          loader:({params})=>fetch(`https://my-tenth-assignment-server-one.vercel.app/spot/${params.id}`)
+          loader:({params})=>fetch(`http://localhost:5000/spot/${params.id}`)
         },
         {
           path:'/allSpot',
           element:<PrivetRoute><AllSpot></AllSpot></PrivetRoute>,
-          loader:()=>fetch('https://my-tenth-assignment-server-one.vercel.app/spot')
+          loader:()=>fetch('http://localhost:5000/spot')
         },
         {
           path:'/myList',
@@ -53,7 +53,7 @@ export const router = createBrowserRouter([
         {
           path:'/update/:id',
           element:<Update></Update>,
-          loader:({params})=>fetch(`https://my-tenth-assignment-server-one.vercel.app/spot/${params.id}`)
+          loader:({params})=>fetch(`http://localhost:5000/spot/${params.id}`)
         },
         {
           path:'/addCountry',
@@ -62,7 +62,7 @@ export const router = createBrowserRouter([
         {
           path:'/viewCountry/:id',
           element:<ViewCountryDetail></ViewCountryDetail>,
-          loader:({params})=>fetch(`https://my-tenth-assignment-server-one.vercel.app/country/${params.id}`)
+          loader:({params})=>fetch(`http://localhost:5000/country/${params.id}`)
         }
       ]
     },
